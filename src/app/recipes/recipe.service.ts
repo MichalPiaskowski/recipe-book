@@ -21,7 +21,7 @@ export class RecipeService {
     new Recipe(
       'Pizza',
       'Best homemade pizza there is',
-      'https://cdn.pixabay.com/photo/2016/04/09/09/22/pizza-1317699_960_720.jpg',
+      'https://cdn.pixabay.com/photo/2016/03/05/21/46/american-1239081_960_720.jpg',
       [
         new Ingredient('Pizza dough', 200),
         new Ingredient('Cheese', 50),
@@ -33,6 +33,10 @@ export class RecipeService {
 
   getRecipes() {
     return this.recipes.slice();
+  }
+
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
